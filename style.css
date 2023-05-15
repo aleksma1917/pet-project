@@ -1,0 +1,206 @@
+@keyframes Color {
+  0% {
+    box-shadow: 1px 1px 40px rgb(244, 243, 238);
+    transform: scale(1);
+    background-position: 50% 0%;
+  }
+  20% {
+    box-shadow: 1px 1px 40px rgb(63, 220, 237);
+  }
+  40% {
+    box-shadow: 1px 1px 40px rgb(144, 149, 235);
+  }
+  60% {
+    box-shadow: 1px 1px 40px rgb(246, 245, 245);
+  }
+  80% {
+    box-shadow: 1px 1px 40px rgb(3, 232, 244);
+  }
+  100% {
+    box-shadow: 1px 1px 40px rgb(142, 148, 210);
+    transform: scale(1.2);
+  }
+}
+body {
+  margin-top: 200px;
+  display: flex;
+  justify-content: center;
+  background-image: url(bg.jpg);
+  background-size: contain;
+}
+.card {
+  position: relative;
+  width: 300px;
+  height: 450px;
+  border-radius: 19px;
+  overflow: hidden;
+  background-color: rgba(105, 107, 108, 0.172);
+  border: 1px solid rgb(121, 119, 119);
+  backdrop-filter: blur(5px);
+
+  border-radius: 10px;
+  background: rgba(135, 173, 186, 0.067)
+    radial-gradient(
+      circle at 50% 0,
+      rgba(255, 255, 255, 0.079),
+      rgba(255, 255, 255, 0.098)
+    );
+  box-shadow: inset rgba(26, 58, 145, 0.564) 0 -3px 8px,
+    inset rgba(53, 168, 168, 0.504) 0 3px 8px,
+    rgba(0, 0, 0, 0.409) 0 3px 8px -3px;
+}
+
+img {
+  position: absolute;
+  max-width: 100%;
+  border-radius: 8px;
+  color: rgb(255, 255, 255);
+  transition: all 0.10s;
+}
+
+button {
+  position: absolute;
+  background-color: rgb(91, 95, 215);
+  margin-top: 380px;
+  margin-left: 26%;
+  width: 140px;
+  height: 50px;
+  border-radius: 8px;
+  color: #fff9f9;
+
+}
+.text {
+  position: absolute;
+  text-align: center;
+  margin-top: 245px;
+  padding: 0px;
+  font-size: 14px;
+  font-family: Yanone Kaffeesatz, sans-serif;
+  text-shadow: 1px 1px 1px rgb(33, 116, 183), -1px 1px 1px rgb(96, 133, 206);
+  color: rgb(255, 255, 255);
+  transition: all 0.6s;
+}
+
+.card:hover {
+  animation: Color 4s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes bg {
+  0% {
+    border: 1px solid rgb(241, 9, 9);
+  }
+  20% {
+    border: 1px solid rgb(251, 255, 6);
+  }
+  40% {
+    border: 1px solid rgb(6, 255, 10);
+  }
+  60% {
+    border: 1px solid rgb(6, 247, 255);
+  }
+  80% {
+    border: 1px solid rgb(56, 6, 255);
+  }
+  100% {
+    border: 1px solid rgb(255, 6, 193);
+  }
+}
+
+button:hover {
+  animation: bg 10s infinite;
+  animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes swing {
+  15% {
+    -webkit-transform: translateX(9px);
+    transform: translateX(9px);
+  }
+  30% {
+    -webkit-transform: translateX(-9px);
+    transform: translateX(-9px);
+  }
+  40% {
+    -webkit-transform: translateX(6px);
+    transform: translateX(6px);
+  }
+  50% {
+    -webkit-transform: translateX(-6px);
+    transform: translateX(-6px);
+  }
+  65% {
+    -webkit-transform: translateX(3px);
+    transform: translateX(3px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+button:hover {
+  animation: swing 0.6s ease;
+  animation-iteration-count: 1;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 50% 0%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
+.text:hover {
+  animation: gradient 5s infinite;
+}
+
+button:active {
+}
+button.btn {
+  font-weight: 600;
+  color: #382b22;
+  text-transform: uppercase;
+  background: #4bfefe;
+  border: 2px solid #898a8b;
+  border-radius: 8px;
+  transition: transform 0.15s;
+  transform-style: preserve-3d;
+}
+
+button.btn::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #43698a;
+  border-radius: inherit;
+  box-shadow: 0 0 0 2px rgb(114, 113, 114), 0 0.625em 0 0 #3e3d3d17;
+  transform: translate3d(0, 0.75em, -1em);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+button.btn:active {
+  background: linear-gradient(
+    to bottom,
+    #1e5799 0%,
+    #2989d8 50%,
+    #207cca 51%,
+    #7db9e8 100%
+  );
+  transform: translate(0em, 0.75em);
+}
+button.btn:active::before {
+  box-shadow: 0 0 0 2px #2c54c3, 0 0 #0c3fcb;
+  transform: translate3d(0, 0, -1em);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap");
