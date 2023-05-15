@@ -26,7 +26,7 @@ body {
   display: flex;
   justify-content: center;
   background-image: url(bg.jpg);
-  background-size: contain;
+  background-size: cover;
 }
 .card {
   position: relative;
@@ -204,3 +204,5 @@ button.btn:active::before {
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap");
+
+button:active:
